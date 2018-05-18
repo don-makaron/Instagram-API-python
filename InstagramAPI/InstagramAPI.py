@@ -239,7 +239,7 @@ class InstagramAPI:
         # NOTE: We do this first, since it validates whether the media files are
         # valid and lets us avoid wasting time uploading totally invalid albums!
         for idx, item in enumerate(media):
-            if not item.get('file', '') or item.get('tipe', ''):
+            if not item.get('file', '') or item.get('type', ''):
                 raise Exception('Media at index "{}" does not have the required "file" and "type" keys.'.format(idx))
 
             # $itemInternalMetadata = new InternalMetadata();
